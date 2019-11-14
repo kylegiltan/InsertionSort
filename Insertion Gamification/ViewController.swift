@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         //super.viewDidLoad()
         
-        newNumber()
+
         // Do any additional setup after loading the view.
         //        let timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: { timer in
         //             UIView.animate(withDuration: 3, animations: {
@@ -47,12 +47,12 @@ class ViewController: UIViewController {
         //
         //        })
         
-        newGame()
+        
         
         
     }
     
-    func newGame(){
+    func newGame(oneint: Int, sixint: Int){
         var i = 0
         
         UIView.animate(withDuration: 3, animations: {
@@ -84,19 +84,47 @@ class ViewController: UIViewController {
                 self.one.frame.origin.y = self.one.frame.origin.y+20})
             
             i += 1
-            
-            
-            
         }
+        
+        /*
+         let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fire), userInfo: nil, repeats: true)
+         */
+        
+        if oneint > sixint || oneint == sixint {
+            //check if six is placed to the left of one
+            if (self.box1.frame.origin.x > 20){
+                UIView.animate(withDuration: 2, animations: {
+                    self.box3.frame.origin.x = self.box3.frame.origin.x-20
+                    self.three.frame.origin.x = self.three.frame.origin.x-20})
+                
+                UIView.animate(withDuration: 2, animations: {
+                    self.box2.frame.origin.x = self.box2.frame.origin.x-49
+                    self.two.frame.origin.x = self.two.frame.origin.x-49})
+            }
+        }
+        
+//        if ((oneint < sixint) || (oneint == sixint)){
+//            //check if six is placed to the right of one
+//            if (self.box1.frame.origin.x > 20){
+//
+//            }
+//        }
+        
+        
     }
     //have array
     func newNumber(){
-        one.text = "\(Int.random(in: 1..<10))"
-        two.text = "\(Int.random(in: 1..<10))"
-        three.text = "\(Int.random(in: 1..<10))"
-        four.text = "\(Int.random(in: 1..<10))"
+        var oneint = Int.random(in: 1..<10)
+        var twoint = Int.random(in: 1..<10)
+        var threeint = Int.random(in: 1..<10)
+        var fourint = Int.random(in: 1..<10)
+        var sixint = Int.random(in: 1..<10)
+        one.text = "\(oneint)"
+        two.text = "\(twoint)"
+        three.text = "\(threeint)"
+        four.text = "\(fourint)"
         //five.text = "\(Int.random(in: 0..<10))"
-        six.text = "\(Int.random(in: 1..<10))"
+        six.text = "\(sixint)"
         
     }
     
@@ -112,7 +140,8 @@ class ViewController: UIViewController {
             self.one.frame.origin.x = self.one.frame.origin.x+20})
     }
     
-    @IBAction func restartGameButtonPressed(_ sender: Any) {
+    
+    @IBAction func startGameButtonPressed(_ sender: UIButton) {
         newNumber()
         self.box6.frame.origin.y = 541
         self.six.frame.origin.y = 541
