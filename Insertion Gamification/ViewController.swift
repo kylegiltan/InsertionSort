@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     //MARK:- IBOUTLETS
     
+    
     @IBOutlet weak var zero: UILabel!
     @IBOutlet weak var one: UILabel!
     @IBOutlet weak var two: UILabel!
