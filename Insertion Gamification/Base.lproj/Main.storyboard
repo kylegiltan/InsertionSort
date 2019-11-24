@@ -112,8 +112,8 @@
                                     <action selector="startGameButtonPressed:" destination="NT6-Yj-8Ws" eventType="touchUpInside" id="6wo-lf-z62"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redLine" translatesAutoresizingMaskIntoConstraints="NO" id="AJI-c7-7vo">
-                                <rect key="frame" x="3" y="567" width="36" height="9"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redLine" translatesAutoresizingMaskIntoConstraints="NO" id="rBm-9b-vUf">
+                                <rect key="frame" x="189" y="566" width="36" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -132,6 +132,7 @@
                         <outlet property="four" destination="0gf-tz-zUo" id="I9e-A6-avK"/>
                         <outlet property="gameOverLabel" destination="JWG-hV-CWw" id="Rci-sR-vpn"/>
                         <outlet property="one" destination="W3g-LY-5GZ" id="DVc-M1-VOF"/>
+                        <outlet property="redLine" destination="rBm-9b-vUf" id="cAw-br-yaA"/>
                         <outlet property="three" destination="SIr-fu-tFs" id="R1j-Xn-I9d"/>
                         <outlet property="two" destination="ldk-4d-uPc" id="CQu-eN-gnI"/>
                         <outlet property="zero" destination="3L8-cT-gdH" id="3QI-7o-z1G"/>
