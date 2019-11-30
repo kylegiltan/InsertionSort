@@ -25,8 +25,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var gameOverLabel: UILabel!
     @IBOutlet weak var redLine: UIImageView!
 
-    var boxToMove: UIImageView
-    var textToMove: UILabel
+//    var boxToMove: UIImageView
+//    var textToMove: UILabel
     
     
     //MARK:- viewDidLoad
@@ -40,6 +40,15 @@ class ViewController: UIViewController {
         return numRet
         
     }
+    
+    //MARK:- Home
+    
+    @IBAction func homeButtonPressed(_ sender: UIButton) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
     
     //MARK:- Start
     @IBAction func startGameButtonPressed(_ sender: UIButton) {
@@ -80,58 +89,60 @@ class ViewController: UIViewController {
     
     //MARK:- Movements
     @IBAction func moveLeftPressed(_ sender: UIButton) {
-        if (self.boxToMove.frame.origin.x > 0 && self.boxToMove.frame.origin.x < 50){
-            self.redLine.frame.origin.x = 10}
-            
-        else if (self.boxToMove.frame.origin.x > 50 && self.boxToMove.frame.origin.x < 143){
-            self.redLine.frame.origin.x = 97
-        }
-            
-        else if (self.boxToMove.frame.origin.x > 143 && self.boxToMove.frame.origin.x < 237){
-            self.redLine.frame.origin.x = 190
-        }
-            
-        else if (self.boxToMove.frame.origin.x > 237 && self.boxToMove.frame.origin.x < 330){
-            self.redLine.frame.origin.x = 283
-        }
-            
-        else if (self.boxToMove.frame.origin.x > 330){
-            self.redLine.frame.origin.x = 370
-        }
-        
-        if self.boxToMove.frame.origin.x <= 10{}
-        else{
-            UIView.animate(withDuration: 0.5, animations: {
-                self.boxToMove.frame.origin.x = self.boxToMove.frame.origin.x-20
-                self.textToMove.frame.origin.x = self.textToMove.frame.origin.x-20})
-        }
+//        if (self.boxToMove.frame.origin.x > 0 && self.boxToMove.frame.origin.x < 50){
+//            self.redLine.frame.origin.x = 10}
+//
+//        else if (self.boxToMove.frame.origin.x > 50 && self.boxToMove.frame.origin.x < 143){
+//            self.redLine.frame.origin.x = 97
+//        }
+//
+//        else if (self.boxToMove.frame.origin.x > 143 && self.boxToMove.frame.origin.x < 237){
+//            self.redLine.frame.origin.x = 190
+//        }
+//
+//        else if (self.boxToMove.frame.origin.x > 237 && self.boxToMove.frame.origin.x < 330){
+//            self.redLine.frame.origin.x = 283
+//        }
+//
+//        else if (self.boxToMove.frame.origin.x > 330){
+//            self.redLine.frame.origin.x = 370
+//        }
+//
+//        if self.boxToMove.frame.origin.x <= 10{}
+//        else{
+//            UIView.animate(withDuration: 0.5, animations: {
+//                self.boxToMove.frame.origin.x = self.boxToMove.frame.origin.x-20
+//                self.textToMove.frame.origin.x = self.textToMove.frame.origin.x-20})
+//        }
+        print("HI")
     }
     
     @IBAction func moveRightPressed(_ sender: UIButton) {
-        if (self.boxToMove.frame.origin.x > 0 && self.boxToMove.frame.origin.x < 50){
-            self.redLine.frame.origin.x = 10}
-            
-        else if (self.boxToMove.frame.origin.x > 50 && self.boxToMove.frame.origin.x < 143){
-            self.redLine.frame.origin.x = 97
-        }
-            
-        else if (self.boxToMove.frame.origin.x > 143 && self.boxToMove.frame.origin.x < 237){
-            self.redLine.frame.origin.x = 190
-        }
-            
-        else if (self.boxToMove.frame.origin.x > 237 && self.boxToMove.frame.origin.x < 330){
-            self.redLine.frame.origin.x = 283
-        }
-            
-        else if (self.boxToMove.frame.origin.x > 330){
-            self.redLine.frame.origin.x = 370
-        }
-        
-        if self.boxToMove.frame.origin.x >= 370 {}
-        else{
-            UIView.animate(withDuration: 0.5, animations: {self.boxToMove.frame.origin.x = self.boxToMove.frame.origin.x+20
-                self.textToMove.frame.origin.x = self.textToMove.frame.origin.x+20})
-        }
+//        if (self.boxToMove.frame.origin.x > 0 && self.boxToMove.frame.origin.x < 50){
+//            self.redLine.frame.origin.x = 10}
+//
+//        else if (self.boxToMove.frame.origin.x > 50 && self.boxToMove.frame.origin.x < 143){
+//            self.redLine.frame.origin.x = 97
+//        }
+//
+//        else if (self.boxToMove.frame.origin.x > 143 && self.boxToMove.frame.origin.x < 237){
+//            self.redLine.frame.origin.x = 190
+//        }
+//
+//        else if (self.boxToMove.frame.origin.x > 237 && self.boxToMove.frame.origin.x < 330){
+//            self.redLine.frame.origin.x = 283
+//        }
+//
+//        else if (self.boxToMove.frame.origin.x > 330){
+//            self.redLine.frame.origin.x = 370
+//        }
+//
+//        if self.boxToMove.frame.origin.x >= 370 {}
+//        else{
+//            UIView.animate(withDuration: 0.5, animations: {self.boxToMove.frame.origin.x = self.boxToMove.frame.origin.x+20
+//                self.textToMove.frame.origin.x = self.textToMove.frame.origin.x+20})
+//        }
+        print("HI")
     }
     
 
@@ -144,40 +155,40 @@ class ViewController: UIViewController {
     
     //MARK:- FIRST
     func newGame(){//first: Int, second: Int){
-        boxToMove = self.box1
-        textToMove = self.one
-        var i = 0
-        
-        UIView.animate(withDuration: 3, animations: {
-            self.box1.frame.origin.y = 160
-            self.one.frame.origin.y = 160
-            self.box1.frame.origin.x = 190
-            self.one.frame.origin.x = 190
-        })
-        
-        UIView.animate(withDuration: 2, animations: {
-            self.box0.frame.origin.x = 50
-            self.zero.frame.origin.x = 50
-            self.box2.frame.origin.x = 143
-            self.two.frame.origin.x = 143
-            self.box3.frame.origin.x = 237
-            self.three.frame.origin.x = 237
-            self.box4.frame.origin.x = 330
-            self.four.frame.origin.x = 330
-        })
-        
-        UIView.animate(withDuration: 0.1) {
-            self.redLine.frame.origin.x = 190
-            self.redLine.isHidden = false
-        }
-        
-        while(i < 17){
-            UIView.animate(withDuration: 20, animations: {
-                self.box1.frame.origin.y = self.box1.frame.origin.y+20
-                self.one.frame.origin.y = self.one.frame.origin.y+20})
-            i += 1
-        }
-        
+//        boxToMove = self.box1
+//        textToMove = self.one
+//        var i = 0
+//
+//        UIView.animate(withDuration: 3, animations: {
+//            self.box1.frame.origin.y = 160
+//            self.one.frame.origin.y = 160
+//            self.box1.frame.origin.x = 190
+//            self.one.frame.origin.x = 190
+//        })
+//
+//        UIView.animate(withDuration: 2, animations: {
+//            self.box0.frame.origin.x = 50
+//            self.zero.frame.origin.x = 50
+//            self.box2.frame.origin.x = 143
+//            self.two.frame.origin.x = 143
+//            self.box3.frame.origin.x = 237
+//            self.three.frame.origin.x = 237
+//            self.box4.frame.origin.x = 330
+//            self.four.frame.origin.x = 330
+//        })
+//
+//        UIView.animate(withDuration: 0.1) {
+//            self.redLine.frame.origin.x = 190
+//            self.redLine.isHidden = false
+//        }
+//
+//        while(i < 17){
+//            UIView.animate(withDuration: 20, animations: {
+//                self.box1.frame.origin.y = self.box1.frame.origin.y+20
+//                self.one.frame.origin.y = self.one.frame.origin.y+20})
+//            i += 1
+//        }
+        print("HI")
     }
     
     func firstInsert(){
@@ -250,40 +261,40 @@ class ViewController: UIViewController {
     
     //MARK:- second
     func secondNewGame(){//second: Int, third: Int){
-        boxToMove = self.box2
-        textToMove = self.two
-        var i = 0
-        
-        UIView.animate(withDuration: 3, animations: {
-            self.box2.frame.origin.y = 160
-            self.two.frame.origin.y = 160
-            self.box2.frame.origin.x = 190
-            self.two.frame.origin.x = 190
-        })
-        
-        UIView.animate(withDuration: 2, animations: {
-            self.box0.frame.origin.x = 50
-            self.zero.frame.origin.x = 50
-            self.box1.frame.origin.x = 143
-            self.one.frame.origin.x = 143
-            self.box3.frame.origin.x = 237
-            self.three.frame.origin.x = 237
-            self.box4.frame.origin.x = 330
-            self.four.frame.origin.x = 330
-        })
-        
-        UIView.animate(withDuration: 0.1) {
-            self.redLine.frame.origin.x = 190
-            self.redLine.isHidden = false
-        }
-        
-        while(i < 17){
-            UIView.animate(withDuration: 20, animations: {
-                self.box2.frame.origin.y = self.box2.frame.origin.y+20
-                self.two.frame.origin.y = self.two.frame.origin.y+20})
-            i += 1
-        }
-        
+//        boxToMove = self.box2
+//        textToMove = self.two
+//        var i = 0
+//
+//        UIView.animate(withDuration: 3, animations: {
+//            self.box2.frame.origin.y = 160
+//            self.two.frame.origin.y = 160
+//            self.box2.frame.origin.x = 190
+//            self.two.frame.origin.x = 190
+//        })
+//
+//        UIView.animate(withDuration: 2, animations: {
+//            self.box0.frame.origin.x = 50
+//            self.zero.frame.origin.x = 50
+//            self.box1.frame.origin.x = 143
+//            self.one.frame.origin.x = 143
+//            self.box3.frame.origin.x = 237
+//            self.three.frame.origin.x = 237
+//            self.box4.frame.origin.x = 330
+//            self.four.frame.origin.x = 330
+//        })
+//
+//        UIView.animate(withDuration: 0.1) {
+//            self.redLine.frame.origin.x = 190
+//            self.redLine.isHidden = false
+//        }
+//
+//        while(i < 17){
+//            UIView.animate(withDuration: 20, animations: {
+//                self.box2.frame.origin.y = self.box2.frame.origin.y+20
+//                self.two.frame.origin.y = self.two.frame.origin.y+20})
+//            i += 1
+//        }
+        print("HI")
     }
     
     func secondInsert(){

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NT6-Yj-8Ws">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPS-n9-tIB">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -104,24 +104,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redLine" translatesAutoresizingMaskIntoConstraints="NO" id="rBm-9b-vUf">
+                                <rect key="frame" x="189" y="566" width="36" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd2-AV-ijg">
-                                <rect key="frame" x="316" y="44" width="78" height="30"/>
+                                <rect key="frame" x="298" y="154" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
                                     <action selector="startGameButtonPressed:" destination="NT6-Yj-8Ws" eventType="touchUpInside" id="6wo-lf-z62"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redLine" translatesAutoresizingMaskIntoConstraints="NO" id="rBm-9b-vUf">
-                                <rect key="frame" x="189" y="566" width="36" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="3ff-vo-T2x"/>
                     </view>
                     <navigationItem key="navigationItem" id="0QK-Hh-QTv">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Em-sT-tA7"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="SMW-7D-dPa">
+                            <connections>
+                                <action selector="homeButtonPressed:" destination="NT6-Yj-8Ws" id="E0Q-Hg-IEk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="box0" destination="XfU-KC-JVB" id="KZH-0N-JqU"/>
@@ -140,7 +144,214 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cd-HL-s1l" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3642.0289855072465" y="-661.60714285714278"/>
+            <point key="canvasLocation" x="4520" y="-1396"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jN5-Dl-LeN">
+            <objects>
+                <viewController id="9fB-XX-wUM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DFS-AM-yjl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWl-Sr-8YL">
+                                <rect key="frame" x="162" y="309" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click to Start"/>
+                                <connections>
+                                    <segue destination="NT6-Yj-8Ws" kind="show" identifier="startGame" id="vqa-OO-Gwd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vt-wN-AnU">
+                                <rect key="frame" x="150" y="421" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="About this Game"/>
+                                <connections>
+                                    <segue destination="UFr-dy-Tjt" kind="show" identifier="aboutThisGame" id="9Wc-iP-dq9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tetris Insertion Sort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8T4-FR-Ydp">
+                                <rect key="frame" x="103" y="123" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-Bm-1Pg">
+                                <rect key="frame" x="167" y="363" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Instructions"/>
+                                <connections>
+                                    <segue destination="6SJ-7w-H36" kind="show" identifier="instructions" id="JZC-Bd-X9v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By Sophie Appicelli, Sarah Ford, Dylan Nadeau, &amp; Kyle Tan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-YR-0nO">
+                                <rect key="frame" x="31" y="808" width="353" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SXR-rc-VS8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GDq-ca-o1E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mx6-5s-qoe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3634.7826086956525" y="-662.27678571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FNW-yt-TSQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sL-AL-AcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kPS-n9-tIB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ky3-6Q-6R0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9fB-XX-wUM" kind="relationship" relationship="rootViewController" id="Mo9-tb-r1G"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2724.6376811594205" y="-662.27678571428567"/>
+        </scene>
+        <!--Instructions-->
+        <scene sceneID="amr-gQ-Gsz">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Br-g2-Bcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="6SJ-7w-H36" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ezc-g6-1y4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Players begin with an unsorted array " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cqx-sD-WEU">
+                                <rect key="frame" x="21" y="174" width="374" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="An element in the array will then move to the top of the screen " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7m7-6s-R5P">
+                                <rect key="frame" x="20" y="203" width="374" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cM5-Ob-zQL">
+                                <rect key="frame" x="21" y="248" width="372" height="66.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">As the element slowly falls, the player must use the LEFT, RIGHT, and INSERT buttons to correctly sort the element in the array using the insertion sort algorithm</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="If the player does not insert the element in the correct position of the array or the player runs out of time, the game is over" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4nj-3O-vzP">
+                                <rect key="frame" x="21" y="312" width="363" height="66.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HQb-Dq-EaH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Instructions" id="hK5-fo-Mkk"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4519" y="-646"/>
+        </scene>
+        <!--About Insertion Sort-->
+        <scene sceneID="NmT-Uw-Kee">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PU1-Zr-1sK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="UFr-dy-Tjt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1gO-OV-WpX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH5-Ih-gnh">
+                                <rect key="frame" x="20" y="188" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gYr-yI-gYo">
+                                <rect key="frame" x="20" y="217" width="374" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The insertion sort is a sorting algorithm that shifts elements into the appropriate spot in the array, one at a time. It iterates through the array n times. It compares the current element to each element from the beginning until it finds the correct spot to stop at. It is considered a stable algorithm because it does not change the relative order of elements that are equal. 
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Runtime &amp; Space Complexity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHV-ko-AfA">
+                                <rect key="frame" x="20" y="371" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7b-FH-lJQ">
+                                <rect key="frame" x="20" y="392" width="374" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Best runtime: O(n)
+Worst runtime: O(n2)
+Space complexity: O(n)
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advantages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rB-od-Af2">
+                                <rect key="frame" x="20" y="478" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-6M-eJ3">
+                                <rect key="frame" x="20" y="507" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">1.    Simple implementation 
+2.    Efficient for very small inputs or nearly sorted lists
+3.    Does not require any additional space for the algorithm</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disadvantages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-FJ-1oN">
+                                <rect key="frame" x="20" y="608" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uPn-ML-UQA">
+                                <rect key="frame" x="20" y="637" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">1.    Not efficient on large inputs or very unsorted lists
+2.    This algorithm needs a large number of element shifts
+3.    Worst case has a runtime of O(n2)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dAY-ao-Vhl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Insertion Sort" id="i0s-WN-kdd"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4519" y="44"/>
         </scene>
     </scenes>
     <resources>
