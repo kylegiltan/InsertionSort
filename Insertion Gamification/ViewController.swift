@@ -26,6 +26,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var bracket1: UIImageView!
+    @IBOutlet weak var bracket2: UIImageView!
+    @IBOutlet weak var bracket3: UIImageView!
+    @IBOutlet weak var bracket4: UIImageView!
+    
+    
     
 
     var boxToMove:UIImageView? = nil
@@ -66,6 +72,10 @@ class ViewController: UIViewController {
 //        OGthree = three
 //        OGbox4 = box4
 //        OGfour = four
+        bracket1.isHidden = true
+        bracket2.isHidden = true
+        bracket3.isHidden = true
+        bracket4.isHidden = true
     }
     
     //MARK:- New number, don't need
@@ -205,6 +215,8 @@ class ViewController: UIViewController {
     //MARK:- FIRST
     func newGame(){
 
+        bracket1.isHidden = false
+        
         UIView.animate(withDuration: 3, animations: {
             self.box1.frame.origin.y = 160
             self.one.frame.origin.y = 160
@@ -308,6 +320,8 @@ class ViewController: UIViewController {
     
     //MARK:- second
     func secondNewGame(){
+        bracket1.isHidden = true
+        bracket2.isHidden = false
         boxToMove = self.box2
         textToMove = self.two
 
@@ -455,6 +469,8 @@ class ViewController: UIViewController {
     
     //MARK:- third
     func thirdNewGame(){
+        bracket2.isHidden = true
+        bracket3.isHidden = false
         boxToMove = self.box3
         textToMove = self.three
         
@@ -645,6 +661,8 @@ class ViewController: UIViewController {
     //MARK:- fourth
     
     func fourthNewGame(){
+        bracket3.isHidden = true
+        bracket4.isHidden = false
         boxToMove = self.box4
         textToMove = self.four
         
@@ -881,6 +899,7 @@ class ViewController: UIViewController {
     }
     
     func winnerWinnerChickenDinner(){
+        bracket4.isHidden = true
         statusLabel.text = "WINNER WINNER CHICKEN DINNER"
         message.text = "Return to Home to Restart"
         //newGameButton.isHidden = false

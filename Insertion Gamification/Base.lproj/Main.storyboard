@@ -132,6 +132,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bracket1" translatesAutoresizingMaskIntoConstraints="NO" id="DxE-hJ-Wro">
+                                <rect key="frame" x="38" y="574" width="60" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bracket2" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-rt-l3G">
+                                <rect key="frame" x="32" y="574" width="164" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bracket3" translatesAutoresizingMaskIntoConstraints="NO" id="zC8-ie-qx6">
+                                <rect key="frame" x="26" y="574" width="275" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bracket4" translatesAutoresizingMaskIntoConstraints="NO" id="Me2-Yp-wt8">
+                                <rect key="frame" x="20" y="574" width="380" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="3ff-vo-T2x"/>
@@ -143,6 +159,10 @@
                         <outlet property="box2" destination="ukI-0x-Kbc" id="A2Y-rz-aUI"/>
                         <outlet property="box3" destination="q0U-OA-wc6" id="4tP-a1-2AJ"/>
                         <outlet property="box4" destination="lpA-yI-VhQ" id="eYr-dY-Fbi"/>
+                        <outlet property="bracket1" destination="DxE-hJ-Wro" id="qfM-Bx-Gl2"/>
+                        <outlet property="bracket2" destination="eX2-rt-l3G" id="WzC-1g-Y5I"/>
+                        <outlet property="bracket3" destination="zC8-ie-qx6" id="Aal-2G-ZMp"/>
+                        <outlet property="bracket4" destination="Me2-Yp-wt8" id="2UP-D3-RMJ"/>
                         <outlet property="four" destination="0gf-tz-zUo" id="I9e-A6-avK"/>
                         <outlet property="message" destination="PbY-2D-UkW" id="9Do-YU-vCz"/>
                         <outlet property="newGameButton" destination="hd2-AV-ijg" id="9Cd-Cd-r5d"/>
@@ -389,6 +409,10 @@ Space complexity: O(n)
         <image name="box3" width="310" height="163"/>
         <image name="box4" width="310" height="163"/>
         <image name="box6" width="310" height="163"/>
+        <image name="bracket1" width="156" height="38"/>
+        <image name="bracket2" width="156" height="38"/>
+        <image name="bracket3" width="156" height="38"/>
+        <image name="bracket4" width="156" height="38"/>
         <image name="redLine" width="2207" height="728"/>
     </resources>
 </document>
