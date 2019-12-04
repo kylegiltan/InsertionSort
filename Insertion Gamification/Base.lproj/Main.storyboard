@@ -97,13 +97,6 @@
                                     <action selector="insertButtonPressed:" destination="NT6-Yj-8Ws" eventType="touchUpInside" id="uEq-0C-16k"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWG-hV-CWw">
-                                <rect key="frame" x="104" y="637" width="204" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redLine" translatesAutoresizingMaskIntoConstraints="NO" id="rBm-9b-vUf">
                                 <rect key="frame" x="189" y="566" width="36" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -125,6 +118,20 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WINNER WINNER CHICKEN DINNER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4w-fD-q9U">
+                                <rect key="frame" x="32" y="166" width="350" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Return to Home to Restart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbY-2D-UkW">
+                                <rect key="frame" x="93" y="321" width="232" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="3ff-vo-T2x"/>
@@ -137,10 +144,11 @@
                         <outlet property="box3" destination="q0U-OA-wc6" id="4tP-a1-2AJ"/>
                         <outlet property="box4" destination="lpA-yI-VhQ" id="eYr-dY-Fbi"/>
                         <outlet property="four" destination="0gf-tz-zUo" id="I9e-A6-avK"/>
-                        <outlet property="gameOverLabel" destination="JWG-hV-CWw" id="Rci-sR-vpn"/>
+                        <outlet property="message" destination="PbY-2D-UkW" id="9Do-YU-vCz"/>
                         <outlet property="newGameButton" destination="hd2-AV-ijg" id="9Cd-Cd-r5d"/>
                         <outlet property="one" destination="W3g-LY-5GZ" id="DVc-M1-VOF"/>
                         <outlet property="redLine" destination="rBm-9b-vUf" id="cAw-br-yaA"/>
+                        <outlet property="statusLabel" destination="k4w-fD-q9U" id="B4q-l9-Xte"/>
                         <outlet property="three" destination="SIr-fu-tFs" id="R1j-Xn-I9d"/>
                         <outlet property="two" destination="ldk-4d-uPc" id="CQu-eN-gnI"/>
                         <outlet property="zero" destination="3L8-cT-gdH" id="3QI-7o-z1G"/>
@@ -149,21 +157,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cd-HL-s1l" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4518.840579710145" y="-1396.2053571428571"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="UvU-hD-O1t">
-            <objects>
-                <viewController id="5fo-CR-0B0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wu0-C4-fvg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="rn6-Kr-04a"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2NT-gR-A0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5496" y="-1396"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jN5-Dl-LeN">
@@ -387,7 +380,7 @@ Space complexity: O(n)
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PU1-Zr-1sK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4518.840579710145" y="43.526785714285715"/>
+            <point key="canvasLocation" x="4519" y="67"/>
         </scene>
     </scenes>
     <resources>

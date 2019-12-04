@@ -22,9 +22,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var box2: UIImageView!
     @IBOutlet weak var box3: UIImageView!
     @IBOutlet weak var box4: UIImageView!
-    @IBOutlet weak var gameOverLabel: UILabel!
     @IBOutlet weak var redLine: UIImageView!
     @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var message: UILabel!
     
 
     var boxToMove:UIImageView? = nil
@@ -50,8 +51,21 @@ class ViewController: UIViewController {
     //MARK:- viewDidLoad
     override func viewDidLoad() {
         redLine.isHidden = true
+        newGameButton.isHidden = false
         boxToMove = box1
         textToMove = one
+        statusLabel.text = ""
+        message.text = ""
+//        OGbox0 = box0
+//        OGzero = zero
+//        OGbox1 = box1
+//        OGone = one
+//        OGbox2 = box2
+//        OGtwo = two
+//        OGbox3 = box3
+//        OGthree = three
+//        OGbox4 = box4
+//        OGfour = four
     }
     
     //MARK:- New number, don't need
@@ -65,9 +79,14 @@ class ViewController: UIViewController {
     //MARK:- Start
     @IBAction func startGameButtonPressed(_ sender: UIButton) {
         newGameButton.isHidden = true
+        restartGame()
+        newGame()
+        
+    }
+    
+    func restartGame(){
         self.boxToMove = box1
         self.textToMove = one
-        gameOverLabel.text = ""
         var oneint = newNumber()
         var twoint = newNumber()
         var threeint = newNumber()
@@ -102,7 +121,6 @@ class ViewController: UIViewController {
         checkedSecond = false
         checkedThird = false
         checkedFourth = false
-        newGame()
     }
     
     //MARK:- Movements
@@ -183,6 +201,7 @@ class ViewController: UIViewController {
         }
     }
     
+    
     //MARK:- FIRST
     func newGame(){
 
@@ -247,7 +266,7 @@ class ViewController: UIViewController {
                 
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -281,7 +300,7 @@ class ViewController: UIViewController {
                 secondNewGame()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
             
         }
@@ -357,7 +376,7 @@ class ViewController: UIViewController {
                 
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -385,13 +404,13 @@ class ViewController: UIViewController {
                 var temp = one
                 self.box1 = self.box2
                 self.one = self.two
-                self.box1 = boxtemp
+                self.box2 = boxtemp
                 self.two = temp
                 self.checkedSecond = true
                 thirdNewGame()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -429,7 +448,7 @@ class ViewController: UIViewController {
                 thirdNewGame()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
     }
@@ -504,7 +523,7 @@ class ViewController: UIViewController {
                 
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -538,7 +557,7 @@ class ViewController: UIViewController {
                 fourthNewGame()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -566,17 +585,17 @@ class ViewController: UIViewController {
                 var temp1 = one
                 var boxtemp2 = box2
                 var temp2 = two
-                self.box1 = boxtemp2
-                self.one = temp2
-                self.box2 = self.box3
-                self.two = self.three
-                self.box3 = boxtemp1
-                self.three = temp1
+                self.box1 = self.box3
+                self.one = self.three
+                self.box2 = boxtemp1
+                self.two = temp1
+                self.box3 = boxtemp2
+                self.three = temp2
                 self.checkedThird = true
                 fourthNewGame()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -618,7 +637,7 @@ class ViewController: UIViewController {
                 fourthNewGame()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
     }
@@ -696,7 +715,7 @@ class ViewController: UIViewController {
                 
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -730,7 +749,7 @@ class ViewController: UIViewController {
                 winnerWinnerChickenDinner()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -758,17 +777,17 @@ class ViewController: UIViewController {
                 var temp3 = three
                 var boxtemp2 = box2
                 var temp2 = two
-                self.box2 = boxtemp3
-                self.two = temp3
-                self.box3 = self.box4
-                self.three = self.four
-                self.box4 = boxtemp2
-                self.four = temp2
+                self.box2 = self.box4
+                self.two = self.four
+                self.box3 = boxtemp2
+                self.three = temp2
+                self.box4 = boxtemp3
+                self.four = temp3
                 self.checkedFourth = true
                 winnerWinnerChickenDinner()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
         
@@ -798,19 +817,19 @@ class ViewController: UIViewController {
                 var temp2 = two
                 var boxtemp1 = box1
                 var temp1 = one
-                self.box1 = boxtemp1
-                self.one = temp1
-                self.box2 = boxtemp3
-                self.two = temp3
-                self.box3 = self.box4
-                self.three = self.four
-                self.box4 = boxtemp1
-                self.four = temp1
+                self.box1 = self.box4
+                self.one = self.four
+                self.box2 = boxtemp1
+                self.two = temp1
+                self.box3 = boxtemp2
+                self.three = temp2
+                self.box4 = boxtemp3
+                self.four = temp3
                 self.checkedFourth = true
                 winnerWinnerChickenDinner()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
             
@@ -856,12 +875,19 @@ class ViewController: UIViewController {
                 winnerWinnerChickenDinner()
             }
             else{
-                gameOverLabel.text = "GAME OVER!"
+                gameOver()
             }
         }
     }
     
     func winnerWinnerChickenDinner(){
-        gameOverLabel.text = "WINNER!"
+        statusLabel.text = "WINNER WINNER CHICKEN DINNER"
+        message.text = "Return to Home to Restart"
+        //newGameButton.isHidden = false
+    }
+    func gameOver(){
+        statusLabel.text = "GAME OVER"
+        message.text = "Return to Home to Restart"
+        //newGameButton.isHidden = false
     }
 }

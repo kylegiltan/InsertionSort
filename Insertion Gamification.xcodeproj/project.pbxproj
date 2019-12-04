@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		273790F423976626005FFC55 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273790F323976626005FFC55 /* GameOverViewController.swift */; };
 		2760468F237CE45800AFEB6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2760468E237CE45800AFEB6B /* AppDelegate.swift */; };
 		27604691237CE45800AFEB6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27604690237CE45800AFEB6B /* ViewController.swift */; };
 		27604694237CE45800AFEB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27604692237CE45800AFEB6B /* Main.storyboard */; };
@@ -16,7 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		273790F323976626005FFC55 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		2760468B237CE45800AFEB6B /* Insertion Gamification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insertion Gamification.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2760468E237CE45800AFEB6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27604690237CE45800AFEB6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			children = (
 				2760468E237CE45800AFEB6B /* AppDelegate.swift */,
 				27604690237CE45800AFEB6B /* ViewController.swift */,
-				273790F323976626005FFC55 /* GameOverViewController.swift */,
 				27604692237CE45800AFEB6B /* Main.storyboard */,
 				27604695237CE45900AFEB6B /* Assets.xcassets */,
 				27604697237CE45900AFEB6B /* LaunchScreen.storyboard */,
@@ -140,7 +137,6 @@
 			files = (
 				27604691237CE45800AFEB6B /* ViewController.swift in Sources */,
 				2760468F237CE45800AFEB6B /* AppDelegate.swift in Sources */,
-				273790F423976626005FFC55 /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
