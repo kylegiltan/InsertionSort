@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var bracket2: UIImageView!
     @IBOutlet weak var bracket3: UIImageView!
     @IBOutlet weak var bracket4: UIImageView!
+    @IBOutlet weak var correctLabel: UILabel!
+    @IBOutlet weak var pleaseInsertLabel: UILabel!
     
     
     
@@ -56,6 +58,8 @@ class ViewController: UIViewController {
     
     //MARK:- viewDidLoad
     override func viewDidLoad() {
+        correctLabel.isHidden = true
+        pleaseInsertLabel.isHidden = true
         redLine.isHidden = true
         newGameButton.isHidden = false
         boxToMove = box1
@@ -98,10 +102,22 @@ class ViewController: UIViewController {
         self.boxToMove = box1
         self.textToMove = one
         var oneint = newNumber()
-        var twoint = newNumber()
-        var threeint = newNumber()
-        var fourint = newNumber()
-        var zeroint = newNumber()
+        var twoint = oneint
+        while twoint == oneint {
+            twoint = newNumber()
+        }
+        var threeint = twoint
+        while threeint == twoint || threeint == oneint {
+            threeint = newNumber()
+        }
+        var fourint = threeint
+        while fourint == threeint || fourint == twoint || fourint == oneint{
+            fourint = newNumber()
+        }
+        var zeroint = fourint
+        while zeroint == fourint || zeroint == threeint || zeroint == twoint || zeroint == oneint{
+            zeroint = newNumber()
+        }
         one.text = "\(oneint)"
         two.text = "\(twoint)"
         three.text = "\(threeint)"
@@ -214,8 +230,10 @@ class ViewController: UIViewController {
     
     //MARK:- FIRST
     func newGame(){
-
+        var displayOne = Int(self.one.text!)!
         bracket1.isHidden = false
+        pleaseInsertLabel.text = "Please insert \(displayOne)"
+        pleaseInsertLabel.isHidden = false
         
         UIView.animate(withDuration: 3, animations: {
             self.box1.frame.origin.y = 160
@@ -257,7 +275,8 @@ class ViewController: UIViewController {
             //check if one is placed to the right of zero
             
             if ((self.box1.frame.origin.x >= 50) && (self.box1.frame.origin.x <= 143)){
-                
+                correctLabel.text = "Correct! \(first) > \(zeroth)"
+                correctLabel.isHidden = false
                 self.redLine.isHidden = true
                 
                 UIView.animate(withDuration: 2, animations: {
@@ -287,7 +306,8 @@ class ViewController: UIViewController {
             if (self.box1.frame.origin.x <= 50){
                 
                 self.redLine.isHidden = true
-                
+                correctLabel.text = "Correct! \(first) < \(zeroth)"
+                correctLabel.isHidden = false
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 115
                     self.zero.frame.origin.x = 115
@@ -320,10 +340,13 @@ class ViewController: UIViewController {
     
     //MARK:- second
     func secondNewGame(){
+        var displayTwo = Int(self.two.text!)!
         bracket1.isHidden = true
         bracket2.isHidden = false
         boxToMove = self.box2
         textToMove = self.two
+        pleaseInsertLabel.text = "Please insert \(displayTwo)"
+        pleaseInsertLabel.isHidden = false
 
         UIView.animate(withDuration: 3, animations: {
             self.box2.frame.origin.y = 160
@@ -372,6 +395,8 @@ class ViewController: UIViewController {
             if (self.box2.frame.origin.x >= 143){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(second) > \(first)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
@@ -399,7 +424,8 @@ class ViewController: UIViewController {
             if ((self.box2.frame.origin.x <= 143) && (self.box2.frame.origin.x >= 50)){
                 
                 self.redLine.isHidden = true
-                
+                correctLabel.text = "Correct! \(second) > \(zeroth) and \(second) < \(first)"
+                correctLabel.isHidden = false
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
                     self.zero.frame.origin.x = 40
@@ -433,6 +459,8 @@ class ViewController: UIViewController {
             if (self.box2.frame.origin.x <= 50){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(second) < \(zeroth)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 115
@@ -469,10 +497,13 @@ class ViewController: UIViewController {
     
     //MARK:- third
     func thirdNewGame(){
+        var displayThree = Int(self.three.text!)!
         bracket2.isHidden = true
         bracket3.isHidden = false
         boxToMove = self.box3
         textToMove = self.three
+        pleaseInsertLabel.text = "Please insert \(displayThree)"
+        pleaseInsertLabel.isHidden = false
         
         UIView.animate(withDuration: 3, animations: {
             self.box3.frame.origin.y = 160
@@ -521,6 +552,8 @@ class ViewController: UIViewController {
             if (self.box3.frame.origin.x >= 237){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(third) > \(second)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
@@ -548,6 +581,8 @@ class ViewController: UIViewController {
             if ((self.box3.frame.origin.x <= 237) && (self.box3.frame.origin.x >= 143)){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(third) > \(first) and \(third) < \(second)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
@@ -582,6 +617,8 @@ class ViewController: UIViewController {
             if ((self.box3.frame.origin.x <= 143) && (self.box3.frame.origin.x >= 50)){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(third) > \(zeroth) and \(third) < \(first)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
@@ -620,6 +657,8 @@ class ViewController: UIViewController {
             if (self.box3.frame.origin.x <= 50){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(third) < \(zeroth)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 115
@@ -661,10 +700,13 @@ class ViewController: UIViewController {
     //MARK:- fourth
     
     func fourthNewGame(){
+        var displayFour = Int(self.four.text!)!
         bracket3.isHidden = true
         bracket4.isHidden = false
         boxToMove = self.box4
         textToMove = self.four
+        pleaseInsertLabel.text = "Please insert \(displayFour)"
+        pleaseInsertLabel.isHidden = false
         
         UIView.animate(withDuration: 3, animations: {
             self.box4.frame.origin.y = 160
@@ -714,6 +756,8 @@ class ViewController: UIViewController {
             if (self.box4.frame.origin.x >= 330){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(fourth) > \(third)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
@@ -742,6 +786,8 @@ class ViewController: UIViewController {
             if ((self.box4.frame.origin.x <= 330) && (self.box4.frame.origin.x >= 237)){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(fourth) > \(second) and \(fourth) < \(third)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
@@ -776,6 +822,8 @@ class ViewController: UIViewController {
             if ((self.box4.frame.origin.x <= 237) && (self.box4.frame.origin.x >= 143)){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(fourth) > \(first) and \(fourth) < \(second)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
@@ -814,6 +862,8 @@ class ViewController: UIViewController {
             if ((self.box4.frame.origin.x <= 143) && (self.box4.frame.origin.x >= 50)){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(fourth) > \(zeroth) and \(fourth) < \(first)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 40
@@ -856,6 +906,8 @@ class ViewController: UIViewController {
             if (self.box4.frame.origin.x <= 50){
                 
                 self.redLine.isHidden = true
+                correctLabel.text = "Correct! \(second) < \(zeroth)"
+                correctLabel.isHidden = false
                 
                 UIView.animate(withDuration: 2, animations: {
                     self.box0.frame.origin.x = 115
@@ -900,11 +952,16 @@ class ViewController: UIViewController {
     
     func winnerWinnerChickenDinner(){
         bracket4.isHidden = true
+        pleaseInsertLabel.isHidden = true
         statusLabel.text = "WINNER WINNER CHICKEN DINNER"
         message.text = "Return to Home to Restart"
+        
         //newGameButton.isHidden = false
     }
     func gameOver(){
+        pleaseInsertLabel.isHidden = true
+        correctLabel.text = "Incorrect placement!"
+        correctLabel.isHidden = false
         statusLabel.text = "GAME OVER"
         message.text = "Return to Home to Restart"
         //newGameButton.isHidden = false

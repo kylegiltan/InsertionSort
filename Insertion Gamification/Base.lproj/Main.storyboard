@@ -148,6 +148,20 @@
                                 <rect key="frame" x="20" y="574" width="380" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blah blah blah blah" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx5-0o-UN9">
+                                <rect key="frame" x="40" y="596" width="327" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blah blah blah blah" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xga-SV-zTs">
+                                <rect key="frame" x="40" y="639" width="327" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="3ff-vo-T2x"/>
@@ -163,10 +177,12 @@
                         <outlet property="bracket2" destination="eX2-rt-l3G" id="WzC-1g-Y5I"/>
                         <outlet property="bracket3" destination="zC8-ie-qx6" id="Aal-2G-ZMp"/>
                         <outlet property="bracket4" destination="Me2-Yp-wt8" id="2UP-D3-RMJ"/>
+                        <outlet property="correctLabel" destination="Fx5-0o-UN9" id="mN7-3p-7ec"/>
                         <outlet property="four" destination="0gf-tz-zUo" id="I9e-A6-avK"/>
                         <outlet property="message" destination="PbY-2D-UkW" id="9Do-YU-vCz"/>
                         <outlet property="newGameButton" destination="hd2-AV-ijg" id="9Cd-Cd-r5d"/>
                         <outlet property="one" destination="W3g-LY-5GZ" id="DVc-M1-VOF"/>
+                        <outlet property="pleaseInsertLabel" destination="xga-SV-zTs" id="V49-Dh-KFy"/>
                         <outlet property="redLine" destination="rBm-9b-vUf" id="cAw-br-yaA"/>
                         <outlet property="statusLabel" destination="k4w-fD-q9U" id="B4q-l9-Xte"/>
                         <outlet property="three" destination="SIr-fu-tFs" id="R1j-Xn-I9d"/>
@@ -299,13 +315,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Note: When inserting an element of equal value, the element to insert must be placed to the right of the sorted element" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-Ah-CbQ">
-                                <rect key="frame" x="16" y="594" width="372" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96079725029999996" green="0.96076112989999995" blue="0.96078556780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.96079725027084351" green="0.96076112985610962" blue="0.96078556776046753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="HQb-Dq-EaH"/>
@@ -348,11 +357,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7b-FH-lJQ">
-                                <rect key="frame" x="20" y="353" width="374" height="78"/>
+                                <rect key="frame" x="20" y="353" width="374" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">Best runtime: O(n)
-Worst runtime: O(n2)
+Worst runtime: O(n²)
 Space complexity: O(n)
 </string>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
@@ -383,12 +392,12 @@ Space complexity: O(n)
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uPn-ML-UQA">
-                                <rect key="frame" x="20" y="620" width="374" height="118"/>
+                                <rect key="frame" x="20" y="620" width="374" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">1.    Not efficient on large inputs or very unsorted lists
 2.    This algorithm needs a large number of element shifts
-3.    Worst case has a runtime of O(n2)</string>
+3.    Worst case has a runtime of O(n²)</string>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
