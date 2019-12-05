@@ -279,21 +279,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Players begin with an unsorted array " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cqx-sD-WEU">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Players begin with an unsorted array " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cqx-sD-WEU">
                                 <rect key="frame" x="20" y="200" width="374" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96079725027084351" green="0.96076112985610962" blue="0.96078556776046753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="An element in the array will then move to the top of the screen " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7m7-6s-R5P">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="An element in the array will then move to the top of the screen " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7m7-6s-R5P">
                                 <rect key="frame" x="20" y="260" width="374" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96079725027084351" green="0.96076112985610962" blue="0.96078556776046753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cM5-Ob-zQL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cM5-Ob-zQL">
                                 <rect key="frame" x="16" y="338" width="372" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96079725027084351" green="0.96076112985610962" blue="0.96078556776046753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -301,7 +301,7 @@
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="If the player does not insert the element in the correct position of the array or the player runs out of time, the game is over" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4nj-3O-vzP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="If the player does not insert the element in the correct position of the array or the player runs out of time, the game is over" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4nj-3O-vzP">
                                 <rect key="frame" x="16" y="491" width="372" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96079725027084351" green="0.96076112985610962" blue="0.96078556776046753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -340,7 +340,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gYr-yI-gYo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gYr-yI-gYo">
                                 <rect key="frame" x="20" y="130" width="374" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -356,7 +356,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7b-FH-lJQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7b-FH-lJQ">
                                 <rect key="frame" x="20" y="353" width="374" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -374,7 +374,7 @@ Space complexity: O(n)
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-6M-eJ3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-6M-eJ3">
                                 <rect key="frame" x="20" y="465" width="374" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -391,7 +391,7 @@ Space complexity: O(n)
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uPn-ML-UQA">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uPn-ML-UQA">
                                 <rect key="frame" x="20" y="620" width="374" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97648376226425171" green="0.97644716501235962" blue="0.97647196054458618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
